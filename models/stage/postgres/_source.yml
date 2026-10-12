@@ -4,6 +4,10 @@ sources:
   - name: postgres_source
     database: data_lake
     schema: postgres
+    
+    config:
+      tags: ['p1']
+
     tables:
       - name: customer
       - name: employee
