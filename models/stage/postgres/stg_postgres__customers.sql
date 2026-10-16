@@ -7,7 +7,7 @@ with final as
     trim("loyalty_tier") as loyalty_tier,
     cast("signup_date" as date) as signup_date,
     cast("updated_at" as timestamp_ntz) as updated_at
-from {{ source('postgres_source', 'customer') }}
+from {{ source('postgres_source', 'customers') }}
 )
 
 select * from final

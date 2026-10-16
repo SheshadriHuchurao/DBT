@@ -42,3 +42,10 @@ models:
         +materialized: view
         +database: prod
         +schema: data_store
+
+data_tests:
+  my_new_project:
+    postgres:
+      Non_Negative_Order_Quantity:
+        +severity: error
+        +store_failures: true

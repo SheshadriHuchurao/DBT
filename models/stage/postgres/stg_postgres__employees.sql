@@ -6,7 +6,7 @@ with final as (
     trim("job_title") as job_title,
     cast("hire_date" as date) as hire_date,
     cast("updated_at" as timestamp_ntz) as updated_at
-from {{ source('postgres_source', 'employee') }}
+from {{ source('postgres_source', 'employees') }}
 )
 
 select * from final
