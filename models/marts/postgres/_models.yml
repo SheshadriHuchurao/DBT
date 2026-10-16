@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_dim__employees
+    description: "Dimension table containing one row per employee, with employee attributes used for reporting and analytics."
+    columns:
+      - name: employee_sk
+        description: "Surrogate key for the employee, generated in the warehouse. Primary key of this table."
+        data_tests:
+          - not_null
+
+      - name: employee_id
+        description: "Natural/business key for the employee, as it appears in the source system."
+        data_tests:
+          - not_null

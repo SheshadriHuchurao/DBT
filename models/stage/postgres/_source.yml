@@ -7,11 +7,14 @@ sources:
     database: data_lake
     schema: postgres
     tables:
-      - name: customer
-      - name: employee
+      - name: customers
+      - name: employees
       - name: inventory
       - name: orders
       - name: order_items
       - name: payments
       - name: products
       - name: shipments
+      - name: stores
+
+  

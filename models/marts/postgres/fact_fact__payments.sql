@@ -1,1 +1,1 @@
-select * from {{ ref('stg_postgres__payments') }}
+select * from {{ ref('int_postgres__payments') }}
