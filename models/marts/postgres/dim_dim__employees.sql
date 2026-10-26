@@ -1,7 +1,11 @@
 {{ config(
-    materialized='incremental',
-    unique_key='employee_sk',
-    incremental_strategy='merge'
+    materialized='table',
+    post_hook="
+      insert into OPS.AUDIT.MODEL_ROW_COUNTS
+        (model_name, row_count, logged_at)
+      select '{{ this }}', count(*), current_timestamp()
+      from {{ this }}
+    "
 ) }}
 
 select

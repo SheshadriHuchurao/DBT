@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: postgres_source
     config:
-      tags: ['p1']
+      tags: ['p2']
     database: data_lake
     schema: postgres
     tables:
