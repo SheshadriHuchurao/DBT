@@ -7,9 +7,15 @@ models:
       - name: employee_sk
         description: "Surrogate key for the employee, generated in the warehouse. Primary key of this table."
         data_tests:
+          - unique
           - not_null
 
       - name: employee_id
+        description: "Natural/business key for the employee, as it appears in the source system."
+        data_tests:
+          - not_null
+
+      - name: employee_name
         description: "Natural/business key for the employee, as it appears in the source system."
         data_tests:
           - not_null

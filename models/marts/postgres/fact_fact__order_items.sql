@@ -1,4 +1,4 @@
-{{ config(materialized='incremental',
+{{ config(materialized='incremental',  
           unique_key='order_item_id',
           incremental_strategy='merge') }}
 select * from {{ ref('stg_postgres__order_items') }}

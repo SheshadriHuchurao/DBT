@@ -49,3 +49,9 @@ data_tests:
       Non_Negative_Order_Quantity:
         +severity: error
         +store_failures: true
+
+on-run-start:
+  - "{{ audit('RUN_STARTED', 'ALL_SELECTED_MODELS') }}"
+
+on-run-end:
+  - "{{ audit('RUN_ENDED', 'ALL_SELECTED_MODELS') }}"
