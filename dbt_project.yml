@@ -20,24 +20,28 @@ clean-targets:
 models:
   my_new_project:
     stage:
+      +materialized: view
       postgres:
         +materialized: view
         +database: raw
         +schema: postgres_raw
 
     intermediate:
+      +materialized: view
       postgres:
         +materialized: view
         +database: prod
         +schema: intermediate
 
     marts:
+      +materialized: table
       postgres:
         +materialized: table
         +database: prod
         +schema: dim
 
     reporting:
+      +materialized: view
       postgres:
         +materialized: view
         +database: prod

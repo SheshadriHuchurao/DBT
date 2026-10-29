@@ -1,0 +1,45 @@
+version: 2
+sources:
+- name: postgres_landing
+  config:
+    tags: ['p2']
+  description: Fivetran-managed PostgreSQL workforce tables; soft-delete mode required.
+  database: data_lake
+  schema: postgres_workforce
+  tables:
+  - name: departments
+    columns:
+    - name: department_id
+      data_tests:
+      - unique
+      - not_null
+  - name: employees
+    columns:
+    - name: employee_id
+      data_tests:
+      - unique
+      - not_null
+  - name: projects
+    columns:
+    - name: project_id
+      data_tests:
+      - unique
+      - not_null
+  - name: payroll
+    columns:
+    - name: payroll_id
+      data_tests:
+      - unique
+      - not_null
+  - name: timesheets
+    columns:
+    - name: timesheet_id
+      data_tests:
+      - unique
+      - not_null
+  - name: cost_savings
+    columns:
+    - name: saving_id
+      data_tests:
+      - unique
+      - not_null

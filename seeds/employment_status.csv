@@ -1,0 +1,4 @@
+status_code,status_description
+ACTIVE,Active employee
+ON_LEAVE,Employee on approved leave
+INACTIVE,Inactive employee
